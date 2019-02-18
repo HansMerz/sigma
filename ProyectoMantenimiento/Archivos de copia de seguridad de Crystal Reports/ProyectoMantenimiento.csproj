@@ -1,0 +1,445 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DDA36DB1-7B1A-4F3B-9364-594945AD4B9F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ProyectoMantenimiento</RootNamespace>
+    <AssemblyName>ProyectoMantenimiento</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BarcodeLib, Version=1.3.0.0, Culture=neutral, PublicKeyToken=5f09bda868cc39e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\BarcodeLib.1.3.0.0\lib\net20\BarcodeLib.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine">
+      <HintPath>..\..\..\..\..\..\..\program files (x86)\sap businessobjects\crystal reports for .net framework 4.0\common\sap businessobjects enterprise xi 4.0\win32_x86\dotnet\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource">
+      <HintPath>..\..\..\..\..\..\..\program files (x86)\sap businessobjects\crystal reports for .net framework 4.0\common\sap businessobjects enterprise xi 4.0\win32_x86\dotnet\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared">
+      <HintPath>..\..\..\..\..\..\..\program files (x86)\sap businessobjects\crystal reports for .net framework 4.0\common\sap businessobjects enterprise xi 4.0\win32_x86\dotnet\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms">
+      <HintPath>..\..\..\..\..\..\..\program files (x86)\sap businessobjects\crystal reports for .net framework 4.0\common\sap businessobjects enterprise xi 4.0\win32_x86\dotnet\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="zxing, Version=0.16.4.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.4\lib\net461\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.4.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.4\lib\net461\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Advertencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Advertencia.Designer.cs">
+      <DependentUpon>Advertencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarHerramienta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarHerramienta.Designer.cs">
+      <DependentUpon>AgregarHerramienta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarTrabajador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarTrabajador.Designer.cs">
+      <DependentUpon>AgregarTrabajador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Conexion.cs" />
+    <Compile Include="CrearInsumo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearInsumo.Designer.cs">
+      <DependentUpon>CrearInsumo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrearPlanMantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearPlanMantenimiento.Designer.cs">
+      <DependentUpon>CrearPlanMantenimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetHerramientas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetHerramientas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Devolver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Devolver.Designer.cs">
+      <DependentUpon>Devolver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevolverInsumos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevolverInsumos.Designer.cs">
+      <DependentUpon>DevolverInsumos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditarHerramienta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarHerramienta.Designer.cs">
+      <DependentUpon>EditarHerramienta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditarInsumo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarInsumo.Designer.cs">
+      <DependentUpon>EditarInsumo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditarMantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarMantenimiento.Designer.cs">
+      <DependentUpon>EditarMantenimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditarTrabajador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarTrabajador.Designer.cs">
+      <DependentUpon>EditarTrabajador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EjecutadosInforme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EjecutadosInforme.Designer.cs">
+      <DependentUpon>EjecutadosInforme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EjecutarCorrectivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EjecutarCorrectivo.Designer.cs">
+      <DependentUpon>EjecutarCorrectivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EjecutarMantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EjecutarMantenimiento.Designer.cs">
+      <DependentUpon>EjecutarMantenimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HerramientaClass.cs" />
+    <Compile Include="Herramientas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Herramientas.Designer.cs">
+      <DependentUpon>Herramientas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Informe.Designer.cs">
+      <DependentUpon>Informe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InformeEjecutados.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InformeEjecutados.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InformeInventario.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InformeInventario.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Insumos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Insumos.Designer.cs">
+      <DependentUpon>Insumos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsumosClass.cs" />
+    <Compile Include="Inventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario.Designer.cs">
+      <DependentUpon>Inventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventarioClass.cs" />
+    <Compile Include="InventarioInforme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventarioInforme.Designer.cs">
+      <DependentUpon>InventarioInforme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventarioIns.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventarioIns.Designer.cs">
+      <DependentUpon>InventarioIns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento.Designer.cs">
+      <DependentUpon>Mantenimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoClass.cs" />
+    <Compile Include="MantenimientoHerramientaClass.cs" />
+    <Compile Include="MantenimientoPersonaClass.cs" />
+    <Compile Include="MantenimientosEjecutados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientosEjecutados.Designer.cs">
+      <DependentUpon>MantenimientosEjecutados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonaClass.cs" />
+    <Compile Include="Prestar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prestar.Designer.cs">
+      <DependentUpon>Prestar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrestarClass.cs" />
+    <Compile Include="PrestarInsumos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrestarInsumos.Designer.cs">
+      <DependentUpon>PrestarInsumos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Trabajadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Trabajadores.Designer.cs">
+      <DependentUpon>Trabajadores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VerPerHerIns.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerPerHerIns.Designer.cs">
+      <DependentUpon>VerPerHerIns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VerProceso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerProceso.Designer.cs">
+      <DependentUpon>VerProceso.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Advertencia.resx">
+      <DependentUpon>Advertencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarHerramienta.resx">
+      <DependentUpon>AgregarHerramienta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarTrabajador.resx">
+      <DependentUpon>AgregarTrabajador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrearInsumo.resx">
+      <DependentUpon>CrearInsumo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrearPlanMantenimiento.resx">
+      <DependentUpon>CrearPlanMantenimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Devolver.resx">
+      <DependentUpon>Devolver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevolverInsumos.resx">
+      <DependentUpon>DevolverInsumos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarHerramienta.resx">
+      <DependentUpon>EditarHerramienta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarInsumo.resx">
+      <DependentUpon>EditarInsumo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarMantenimiento.resx">
+      <DependentUpon>EditarMantenimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarTrabajador.resx">
+      <DependentUpon>EditarTrabajador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EjecutadosInforme.resx">
+      <DependentUpon>EjecutadosInforme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EjecutarCorrectivo.resx">
+      <DependentUpon>EjecutarCorrectivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EjecutarMantenimiento.resx">
+      <DependentUpon>EjecutarMantenimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Herramientas.resx">
+      <DependentUpon>Herramientas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informe.resx">
+      <DependentUpon>Informe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformeEjecutados.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>InformeEjecutados.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformeInventario.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>InformeInventario.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Insumos.resx">
+      <DependentUpon>Insumos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventario.resx">
+      <DependentUpon>Inventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventarioInforme.resx">
+      <DependentUpon>InventarioInforme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventarioIns.resx">
+      <DependentUpon>InventarioIns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento.resx">
+      <DependentUpon>Mantenimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientosEjecutados.resx">
+      <DependentUpon>MantenimientosEjecutados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prestar.resx">
+      <DependentUpon>Prestar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrestarInsumos.resx">
+      <DependentUpon>PrestarInsumos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Trabajadores.resx">
+      <DependentUpon>Trabajadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerPerHerIns.resx">
+      <DependentUpon>VerPerHerIns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerProceso.resx">
+      <DependentUpon>VerProceso.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataSetHerramientas.xsc">
+      <DependentUpon>DataSetHerramientas.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetHerramientas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetHerramientas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetHerramientas.xss">
+      <DependentUpon>DataSetHerramientas.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
